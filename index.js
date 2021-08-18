@@ -1,4 +1,6 @@
 const program = require("commander");
+const chalk = require("chalk");
+const clipboardy = require("clipboardy");
 
 const createPassword = require('./utils/createPassword')
 
@@ -13,5 +15,23 @@ program
 
 const { length, save, numbers, symbols } = program.opts();
 
+if (length !== undefined && isNaN(length)) {
+  console.log(
+    chalk.bgRed(
+      `error occurred in 'length' option, it should be number type, but received: ${length}`
+    )
+  );
+  process.exit();
+}
+
 // Get generated password
 const generatedPassword = createPassword(length, numbers, symbols);
+
+// Copy to clipboard
+clipboardy.writeSync(generatedPassword);
+
+// Output generated password
+console.log(
+  `${chalk.blue("Generated Password:")} ${chalk.bold(generatedPassword)}`
+);
+console.log(`${chalk.yellow("Password copied to clipboard")}`);
