@@ -9,6 +9,7 @@ const savePassword = require("./utils/savePassword");
 program
   .version("1.0.0")
   .description("Simple Password Generator")
+  .name("passgen")
   .usage("<command> [options]");
 
 program
