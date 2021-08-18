@@ -18,8 +18,12 @@ if you want to use passgen, just follow step
     # download project
     git clone https://github.com/Mix-Liten/passgen.git
 
-    # global install
+    # then you can choose the way that is the most convenient for you
+    # 1. global install
     npm i -g ./passgen
+
+    # 2. set environment variable
+    export PATH=<current_path>/passgen/bin:$PATH
 
 ## Usage
 
