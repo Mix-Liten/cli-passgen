@@ -2,6 +2,7 @@
   "name": "passgen",
   "version": "1.0.0",
   "description": "simple password generator",
+  "main": "index.js",
   "bin": {
     "passgen": "bin/passgen.js"
   },
