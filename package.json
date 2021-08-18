@@ -2,12 +2,26 @@
   "name": "passgen",
   "version": "1.0.0",
   "description": "simple password generator",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "passgen": "bin/passgen.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mix-Liten/passgen.git"
+  },
+  "keywords": [
+    "passgen",
+    "cli"
+  ],
+  "author": "Mix-Liten",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mix-Liten/passgen/issues"
+  },
+  "homepage": "https://github.com/Mix-Liten/passgen#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "chalk": "^4.1.2",
     "clipboardy": "^2.3.0",
